@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: 123456
+#    更新数据库表结构
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+#      日志级别
+logging:
+  level:
+    root: warn
+    com.yg: info #指定包中的日志级别
+  file: log/blog-pro.log #生产日志文件
+server:
+  port: 8081
